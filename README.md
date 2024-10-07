@@ -2,6 +2,12 @@
 
 This is a simple CRUD API built using the Go programming language and the Gin web framework. The API allows you to manage tags through basic operations like creating, reading, updating, and deleting.
 
+You can use PostgresSQL as the database for this project. To set up the database, follow these steps:
+
+```bash
+    docker run --name postgres -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres:alpine
+```
+
 ## API Endpoints
 
 The following endpoints are available in the application:
@@ -24,3 +30,13 @@ curl --request POST \
     "name": "Golang"
 }
 ```
+
+### Swagger Documentation
+
+The API also provides a Swagger documentation endpoint. You can access it by making a GET request to the following URL:
+
+```bash
+http://localhost:8888/docs/index.html
+```
+
+This will display the Swagger documentation page, which includes information about the available endpoints, their parameters, and their responses.
